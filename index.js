@@ -5,6 +5,12 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+
+// The following line allows user the run the backend and the frontend on the same port
+// app.get("/", function(req, res) {
+//     res.sendFile(__dirname + "/public/index.html");
+// });
+
 app.post("/sum", function(req, res) {
     const a = parseInt(req.body.a);
     const b = parseInt(req.body.b);
